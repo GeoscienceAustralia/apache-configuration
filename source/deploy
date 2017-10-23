@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Should be home already but make sure.
+cd /home/ec2-user/apache-configuration
+
+# Update code base
+git pull
+
+# Update any proxies that might have changed
+sudo cp -f config/*.conf /etc/httpd/conf.d
+
+# Pick up any new proxies
+sudo service httpd restart
