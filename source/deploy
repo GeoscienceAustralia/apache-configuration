@@ -9,5 +9,8 @@ git pull
 # Update any proxies that might have changed
 sudo cp -f config/*.conf /etc/httpd/conf.d
 
+# Update any log rotation rules
+sudo cp -f config/logrotate/* /etc/logrotate.d
+
 # Pick up any new proxies
 sudo service httpd restart
