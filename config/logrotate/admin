@@ -1,0 +1,10 @@
+/var/log/admin.log {
+    missingok
+    notifempty
+    compress
+    size 200k
+    daily
+    create 0600 root root
+    rotate 8
+    copytruncate
+}
